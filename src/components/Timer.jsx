@@ -16,6 +16,11 @@ export const Timer= () => {
 				return prev+1;
 			})
 		}, 1000);
+
+		return () => {
+			console.log("Unmounted")
+			clearInterval(x);
+		}
 	}, [])
 
 	return (
